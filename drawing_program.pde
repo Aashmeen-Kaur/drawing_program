@@ -40,10 +40,6 @@ void initializePanel() {
   textSize(16);
   text("Brush Size", 5, 280);
   
-  //Text: "<BrushSize>"
-  fill(black);
-  textSize(20);
-  text(brushSize, 14, 310);
  
   //Text: "Background"
   fill(black);
@@ -177,38 +173,77 @@ void initializePanel() {
     if (brushSizeBarX == i) {
       stroke(black);
     }
-    line(5 + i, 380, 5 + i, 380 - i);
+    line(5 + i, 325, 5 + i, 325 - i);
   }
 }
 
 //Draw the help panel
 void drawHelpPanel() {
   //gray overlay
-  fill(black);
+  fill(gray, 90);
   noStroke();
-  rect(200, 200, 700,450);
+  rect(0, 0, panelWidth, height);
 
   //Info for Brush Color
-  fill(white);
+  fill(black);
   textSize(helpPanelFontSize);
-  text("[1st Bar] = RBG", 210, 18 * helpPanelFontSize );
-  text("Is to pick a color for you brush or background ", 210, 19.5 * helpPanelFontSize);
-    text("", 210, 20 * helpPanelFontSize);
-  text("[2nd Bar] = shades ", 210, 21 * helpPanelFontSize);
-  text("Is to use black, white, or grey. Since RGB bar doesn't have those", 210, 22.5 * helpPanelFontSize);
-    text("", 210, 23 * helpPanelFontSize);
-  text("[3rd Bar] = opasity", 210, 24 * helpPanelFontSize);
-  text("is for you to set the oopacity of the colors", 210, 25.5 *helpPanelFontSize);
-    text("", 210, 26 * helpPanelFontSize);
-  text("Brush Size", 210, 27 *helpPanelFontSize);
-  text("Is to set the size of your brush", 210, 28.5 *helpPanelFontSize);
-    text("", 210, 29 * helpPanelFontSize);
-  text("Gradient Background", 210, 30 *helpPanelFontSize);
-  text("After choosing you color click the button to make the background ombre", 210, 31.5 *helpPanelFontSize);
-    text("", 210, 32 * helpPanelFontSize);
-  text("Fill background: make the background the color of your choice", 210, 33 *helpPanelFontSize);
-  text("Clear background: to start on a new canvas", 210, 34.2 *helpPanelFontSize);
-  text("Random: Make the background or your pen color rainbow", 210, 35.4 *helpPanelFontSize);
+  text("Primary Brush", 3, 1 * helpPanelFontSize);
+  text("Color is the word", 3, 2 * helpPanelFontSize);
+  text("color.Alternative", 3, 3 * helpPanelFontSize);
+  text("Brush Color is", 3, 4 * helpPanelFontSize);
+  text("the box color", 3, 5 * helpPanelFontSize);
+
+  //Info for the three bars
+  fill(black);
+  int tempSize = helpPanelFontSize - 2;
+  textSize(helpPanelFontSize - 2);
+  text("[1st Bar] = HSB", 3, 66 + 1 * tempSize);
+  text("color spectrum:Black", 3, 66 + 2 * tempSize);
+  text("is Primary,White is", 3, 66 + 3 * tempSize);
+  text("Alternative.", 3, 66 + 4 * tempSize);
+  text("", 3, 66 + 5 * tempSize);
+  text("[2nd Bar] = HSB", 3, 66 + 6 * tempSize);
+  text("color spectrum:Red", 3, 66 + 7 * tempSize);
+  text("is Primary,Cyan is", 3, 66 + 8 * tempSize);
+  text("Alternative.", 3, 66 + 9 * tempSize);
+  text("", 3, 66 + 10 * tempSize);
+  text("[3rd Bar] = HSB", 3, 66 + 11 * tempSize);
+  text("Alpha (0 - 100)", 3, 66 + 12 * tempSize);
+
+  //Info for Brush Size
+  text("Size of Brush:Black", 3, 66 + 19 * tempSize);
+  text("is Primary,White is", 3, 66 + 20 * tempSize);
+  text("Alternative.", 3, 66 + 21 * tempSize);
+
+  //Info for GradientBG
+  text("Gradient Background", 3, 346);
+  text("Strength depends on", 3, 356);
+  text("x position of click", 3, 366);
+
+  //Info for Background
+  text("Fill Background", 3, 388);
+
+  //Info for ClearBG
+  text("Clear Background", 3, 417);
+
+  //Info for Shapes
+  text("Shapes - Primary", 3, 66 + 38 * tempSize);
+  text("color is shape color.", 3, 66 + 39 * tempSize);
+  text("Secondary color is", 3, 66 + 40 * tempSize);
+  text("shape outline.", 3, 66 + 41 * tempSize);
+  text("  circle  //  ellipse", 3, 66 + 42 * tempSize);
+  text("  square // rectangle", 3, 66 + 43 * tempSize);
+  text("  triangle // line", 3, 66 + 44 * tempSize);
+  
+  //Info for Random Color
+  text("Random Color -", 3, 66 + 47 * tempSize);
+  text("gives color control", 3, 66 + 48 * tempSize);
+  text("cover to", 3, 66 + 49 * tempSize);
+  text("random(0, 100).", 3, 66 + 50 * tempSize);
+  text("-Random color brush", 3, 66 + 51 * tempSize);
+  text("-Random shape color", 3, 66 + 52 * tempSize);
+  text("Try out Random +", 3, 66 + 53 * tempSize);
+  text("GradientBG/FillBG", 3, 66 + 54 * tempSize);
 }
 
 void draw() {
@@ -385,7 +420,7 @@ void draw() {
             brushColorAlp = (mouseY - 15) / 2;
             brushColorBar3Y = mouseY - 20;
           }
-          if (mouseX > 5 && mouseX < 96 && mouseY > 300 && mouseY < 370) {
+          if (mouseX > 5 && mouseX < 96 && mouseY > 240 && mouseY < 325) {
             brushSize = mouseX - 5;
             brushSizeBarX = mouseX - 5;
           }
@@ -405,7 +440,7 @@ void draw() {
             brushColorAlpAlt = (mouseY - 15) / 2;
             brushColorBar3YAlt = mouseY - 20;
           }
-          if (mouseX > 5 && mouseX < 96 && mouseY > 350 && mouseY < 370) {
+          if (mouseX > 5 && mouseX < 96 && mouseY > 350 && mouseY < 325) {
             brushSizeAlt = mouseX - 5;
             brushSizeBarXAlt = mouseX - 5;
           }
@@ -500,7 +535,60 @@ void draw() {
     if (!displayPanel) {
       //If mouse is anywhere within the canvas while displayPanel is not displayed
       if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
-        if (drawLine) {
+        if (drawCircle || drawEllipse || drawSquare 
+          || drawRectangle|| drawTriangle || drawLine) {
+          if (drawSquare) { //Draw Square
+            if (randomColor) {
+              fill(random(0, 100), 100, 100, brushColorAlp);
+              stroke(random(0, 100), 100, 100, brushColorAlp);
+            } else {
+              fill(brushColor);
+              stroke(brushColorAlt);
+            }
+            rectMode(CENTER);
+            rect(mouseX, mouseY, brushSize * 8, brushSize * 8);
+            rectMode(CORNER);
+          }
+          if (drawRectangle) { //Draw Rectangle
+            if (randomColor) {
+              fill(random(0, 100), 100, 100, brushColorAlp);
+              stroke(random(0, 100), 100, 100, brushColorAlp);
+            } else {
+              fill(brushColor);
+              stroke(brushColorAlt);
+            }
+            rectMode(CENTER);
+            rect(mouseX, mouseY, brushSize * 8, brushSizeAlt * 8);
+            rectMode(CORNER);
+          }
+          if (drawCircle) { //Draw Circle
+            if (randomColor) {
+              fill(random(0, 100), 100, 100, brushColorAlp);
+              stroke(random(0, 100), 100, 100, brushColorAlp);
+            } else {
+              fill(brushColor);
+              stroke(brushColorAlt);
+            }
+            ellipse(mouseX, mouseY, brushSize * 8, brushSize * 8);
+          }
+          if (drawEllipse) { //Draw Ellipse
+            if (randomColor) {
+              fill(random(0, 100), 100, 100, brushColorAlp);
+              stroke(random(0, 100), 100, 100, brushColorAlp);
+            } else {
+              fill(brushColor);
+              stroke(brushColorAlt);
+            }
+            ellipse(mouseX, mouseY, brushSize * 8, brushSizeAlt * 8);
+          }
+          if (drawTriangle) { //Draw Triangle
+            if (randomColor) {
+              fill(random(0, 100), 100, 100, brushColorAlp);
+              stroke(random(0, 100), 100, 100, brushColorAlp);
+            } else {
+              fill(brushColor);
+              stroke(brushColorAlt);
+            }
             //x, y: CEIL(SQRT((size^2)/2)) = dist :: triangle(x, y - dist, x + dist, y + dist, x - dist, y + dist)
             //triangle(25, 507, 43, 543, 7, 543);  given 25, 525
             int distance = brushSize * 8;
@@ -526,7 +614,7 @@ void draw() {
         }
       }
     }
- 
+  }
 
   //Listen for key events
   if (keyPressed) {
@@ -577,7 +665,7 @@ void draw() {
     //Set gradient
     if (key == 'g' || key == 'G') {
       fillGradientBG = true;
-      gradientX = 15;
+      gradientX = 40;
     }
 
     //Set fill
