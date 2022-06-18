@@ -21,6 +21,9 @@
     if (helpPanel == true) {
       drawHelpPanel();
     }
+    if (keyHelpPanel == true) {
+      drawKeyHelpPanel();
+    }
   }
  //Draw gradientBG if directed
   if (fillGradientBG) {

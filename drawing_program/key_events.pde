@@ -22,12 +22,24 @@ void keys (){
     
 
     //If '?' or '/' is pressed, show help info
-    if (key == '?' || key == '/') {
+    if (key == '/' || key == '?') {
       if (frameCount > helpFrameCount + inputDelay) {
         if (helpPanel) {
           helpPanel = false;
         } else {
           helpPanel = true;
+        }
+      }
+      helpFrameCount = frameCount;
+    }
+    
+    //If 'k' or 'K' is pressed, show help info
+    if (key == 'k' || key == 'K') {
+      if (frameCount > helpFrameCount + inputDelay) {
+        if (helpPanel) {
+          keyHelpPanel = false;
+        } else {
+          keyHelpPanel = true;
         }
       }
       helpFrameCount = frameCount;

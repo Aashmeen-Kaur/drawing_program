@@ -8,34 +8,38 @@ AudioMetaData[] songMetaData = new AudioMetaData[numberOfSongs];
 void setup() {
   size(1024, 766);
   drawHelpPanel();
+  drawKeyHelpPanel();
   screen();
   population ();
   populationm();
-   MusicSetup();
+  MusicSetup();
 
 }
 void draw() {
- background ();
- drawpanel();
- events (); 
- keys();
- quitbutton();
- image(ikey, 992,80,30,30);
+  background ();
+  drawpanel();
+  events (); 
+  keys();
+  quitbutton();
+  image(ikey, 992,80,30,30);
   MusicBar();
-   noStroke();
-  //fill(grey);
-  //rect(HorX, HorY, HorW, HorH);
-  //rect(VerX, VerY, VerW, VerH);
-  //fill(white);
-  //stroke(reset);
-  
   MusicDraw();
+  tpButDraw ();
+  stampDraw ();
+  penDraw ();
 
 }
 //Execute whenever a mouse button is pressed
 void mousePressed() {
+  penMP ();
   quitButMP ();
   MBPress();
+  tpMP ();
+  saveB();
+  undo();
+  saveframe();
+  stampMP ();
+  help();
   if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
     if (drawLine) { //Draw Line
       lineFirstX = mouseX;

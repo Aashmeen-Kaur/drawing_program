@@ -1,16 +1,19 @@
 //draw the initial draw panel
 
 void drawpanel() {
+   strokeWeight(1);
+  stroke(1);
+  fill(panelColor);
+  rect(0, 0, 1024, 115);
+  //
   strokeWeight(1);
-  //Draw panelColor drawing panel
-  noStroke();
+  stroke(1);
   fill(panelColor);
   rect(0, 0, panelWidth, 766);
   //
-  strokeWeight(1);
-  noStroke();
-  fill(panelColor);
-  rect(0, 0, 1024, 115);
+  stroke(1);
+   fill(panelColor);
+      rect(100,115,210,660);
 
   //Brush color box: the color of the Alternative brush color
   //Text: "Brush Color"
@@ -77,6 +80,7 @@ void drawpanel() {
     textSize(16);
     text("FillBG", 150, 74);
   }
+  
     //quit button box and hover over
     if (quit) {
     fill(white);
@@ -152,6 +156,9 @@ void drawpanel() {
     fill(black);
     textSize(16);
     text("Template", 25, 645);
+   // stroke(1);
+   //fill(panelColor);
+   //   rect(100,600,210,170);
   } else {
     fill(grey);
     stroke(grey);
@@ -160,6 +167,9 @@ void drawpanel() {
     fill(black);
     textSize(16);
     text("Template", 15, 645);
+   // stroke(1);
+   //fill(panelColor);
+   //   rect(100,600,210,170);
   }
   //PEN
   if (pen) {
@@ -217,22 +227,22 @@ void drawpanel() {
     text("Save", 290, 102);
   }
   //erase
-  if (erase) {
+  if (saveFrame) {
     fill(grey);
     stroke(grey);
     rect(260, 26, 105, 22);
-    //Text: "erase"
+    //Text: "Save Frame"
     fill(black);
     textSize(16);
-    text("Erase", 290, 36);
+    text("Save Frame", 270, 36);
   } else {
     fill(grey);
     stroke(grey);
     rect(260, 26, 105, 22);
-    //Text: "erase"
+    //Text: "Save Frame"
     fill(black);
     textSize(16);
-    text("Erase", 290, 46);
+    text("Save Frame", 270, 46);
   }
   
   //Clear Background button box

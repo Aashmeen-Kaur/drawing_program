@@ -59,6 +59,8 @@ int helpPanelFontSize = 13;        //font size of help panel
 boolean drawAlphaBar = true;       //draw the alpha bar (brushColorBar3)
 boolean displayPanel = true;       //displayPanel true --> Draw displayPanel
 boolean helpPanel = false;         //display help screen
+boolean keyHelpPanel = false;
+boolean backHK = false;
 boolean quit = false;              //quit button
 boolean fillGradientBG = false;    //fill the background with a gradient
 boolean fillBackground = false;    //fill the background with the primary color
@@ -67,7 +69,7 @@ boolean pen = false;
 boolean template = false;
 boolean undo = false;
 boolean save = false;
-boolean erase = false;
+boolean saveFrame = false;
 boolean skey = false;
 boolean help = false;
 boolean clearBackground=false;
@@ -79,8 +81,27 @@ boolean drawTriangle = false;      //draw triangle or not
 boolean drawLine = false;          //draw line or not
 boolean lineClicked = false;       //line's first point
 boolean randomColor = false;       //draw lines/shapes with random colors
+boolean templButtonON=false;
+boolean templButtonRESET=false;
+boolean stampBON=false;
+boolean stampBOFF=false;
+boolean bird1BON=false;
+boolean birdBON=false;
+boolean diamondBON=false;
+boolean roseBON=false;
+boolean dragonBON=false;
+boolean butterflyBON=false;
+boolean sharkBON=false;
+boolean treeBON=false;
+boolean turtleBON=false;
+boolean spiderBON=false;
 
-PImage ikey,play,pause,next,back,loop,order,fastforward,rewind;
+
+PImage ikey, play, pause, next, back, loop, order, fastforward, rewind;
+PImage appleCP, dragonCP, heartCP, peacockCP, flowerCP, vaseCP;
+PImage birdS1, birdS, diamondS, dragonS, butterflyS, sharkS, spiderS, treeS, turtleS, roseS;
+int x  = mouseX;
+  int y  = mouseY;
 
 void population (){
   ikey = loadImage("images/keyboard shortcut.png");
@@ -92,4 +113,23 @@ void population (){
   order = loadImage("images/order.png");
   fastforward = loadImage("images/FastForward.png");
   rewind = loadImage("images/Rewind.png");
+  //
+  appleCP= loadImage("images/apple coloring page.png");
+  dragonCP= loadImage("images/dragon coloring page.png");
+  heartCP= loadImage("images/heart coloring page.png");
+  peacockCP= loadImage("images/peacock coloring page.png");
+  flowerCP= loadImage("images/flowercoloring.png");
+  vaseCP= loadImage("images/vase coloring page.jpg");
+  //
+  birdS1= loadImage("images/bird stamp.png");
+  birdS= loadImage("images/bird stamp - Copy.png");
+  diamondS= loadImage("images/diamond stamp.png");
+  dragonS= loadImage("images/dragon stamp.png");
+  butterflyS= loadImage("images/buterfly stamp.png");
+  sharkS= loadImage("images/shark stamp.png");
+  spiderS= loadImage("images/spider stamp.png");
+  treeS= loadImage("images/tree stamp.png");
+  turtleS = loadImage("images/turtle stamp.png");
+  roseS= loadImage("images/rose stamp.png");
+  //
 };
