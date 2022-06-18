@@ -403,6 +403,24 @@ void birdS1 () {
        helpPanel = false;
      }
   }
+  //
+  //
+  //
+  void keyhelp() {
+  if (mouseX>992 && mouseX<1022 && mouseY>80 && mouseY<110) {
+      if (frameCount > helpFrameCount + inputDelay) {
+        if (keyHelpPanel) {
+          keyHelpPanel = false;
+        } else {
+          keyHelpPanel = true;
+        }
+      }
+      helpFrameCount = frameCount;
+    }
+    if (mouseX>210 && mouseX<1022 && mouseY>155 && mouseY<766) {
+       keyHelpPanel = false;
+    }
+  }
  
   //===========================================================================
  void penDraw () {

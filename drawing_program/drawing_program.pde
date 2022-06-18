@@ -14,6 +14,7 @@ void setup() {
   populationm();
   MusicSetup();
 
+
 }
 void draw() {
   background ();
@@ -40,6 +41,7 @@ void mousePressed() {
   saveframe();
   stampMP ();
   help();
+  keyhelp();
   if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
     if (drawLine) { //Draw Line
       lineFirstX = mouseX;

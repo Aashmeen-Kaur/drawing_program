@@ -117,16 +117,16 @@ void drawpanel() {
     stroke(grey);
     rect(992,80,30,30);
     //Text: "ClearBG"
-    fill(black);
-    textSize(16);
-    text("ClearBG", 142, 100);
+    //fill(black);
+    //textSize(16);
+    //text("ClearBG", 142, 100);
   } else {
     fill(grey);
     stroke(grey);
     rect(992,80,30,30);
     //Text: "ClearBG"
-    fill(black);
-    textSize(16);
+    //fill(black);
+    //textSize(16);
     
   }
   //STAMP
