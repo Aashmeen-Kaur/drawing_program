@@ -152,7 +152,7 @@ void stampDraw () {
       rect(170,550,40,40);
       image(spiderS, 170,545,40,40);
       
-      rect(190,540,60,60);
+      rect(200,540,60,60);
       image(treeS, 190,540,60,60);
       
       rect(240,555,25,25);
@@ -197,6 +197,16 @@ void stampMP () {
     } else {
       stampBON = false;
       stampBOFF = true;
+      bird1BON = false;
+    birdBON=false;
+    diamondBON=false;
+    roseBON=false;
+    dragonBON=false;
+    butterflyBON=false;
+    sharkBON=false;
+    treeBON=false;
+    turtleBON=false;
+    spiderBON=false;
     }
 }
 
@@ -204,7 +214,7 @@ void stampMP () {
 //
 void birdS1 () {
   if ( mouseX>100 && mouseX<140 && mouseY>500 && mouseY<540) {
-    stampBON = true;
+    bird1BON = true;
     birdBON=false;
     diamondBON=false;
     roseBON=false;
@@ -215,7 +225,7 @@ void birdS1 () {
     turtleBON=false;
     spiderBON=false;
   }
-    if(stampBON == true){
+    if(bird1BON == true){
       image(birdS1, mouseX,mouseY,50,50); 
    }
   }
@@ -223,7 +233,7 @@ void birdS1 () {
   void birdS () {
   if ( mouseX>130 && mouseX<190 && mouseY>510 && mouseY<550) {
     birdBON = true;
-    stampBON=false;
+    bird1BON=false;
     diamondBON=false;
     roseBON=false;
     dragonBON=false;
@@ -241,7 +251,7 @@ void birdS1 () {
   void diamondS () {
   if ( mouseX>180 && mouseX<220 && mouseY>510 && mouseY<550) {
     diamondBON = true;
-    stampBON=false;
+    bird1BON=false;
     birdBON=false;
     roseBON=false;
     dragonBON=false;
@@ -259,10 +269,9 @@ void birdS1 () {
   void dragonS () {
   if ( mouseX>230 && mouseX<280 && mouseY>500 && mouseY<540) {
     dragonBON = true;
-    stampBOFF=false;
+    bird1BON=false;
     birdBON=false;
     roseBON=false;
-    dragonBON=false;
     butterflyBON=false;
     sharkBON=false;
     treeBON=false;
@@ -275,9 +284,9 @@ void birdS1 () {
   }
   
   void butterflyS () {
-  if ( mouseX>100 && mouseX<140 && mouseY>500 && mouseY<540) {
-    stampBON = true;
-    stampBOFF=false;
+  if ( mouseX>100 && mouseX<130 && mouseY>550 && mouseY<580) {
+    butterflyBON = true;
+    bird1BON=false;
     birdBON=false;
     diamondBON=false;
     roseBON=false;
@@ -287,15 +296,15 @@ void birdS1 () {
     turtleBON=false;
     spiderBON=false;
   }
-    if(stampBON == true){
-      image(birdS1, mouseX,mouseY,50,50); 
+    if(butterflyBON == true){
+      image(butterflyS, mouseX,mouseY,50,50); 
    }
   }
   
   void sharkS () {
-  if ( mouseX>100 && mouseX<140 && mouseY>500 && mouseY<540) {
-    stampBON = true;
-    stampBOFF=false;
+  if ( mouseX>140 && mouseX<170 && mouseY>550 && mouseY<580) {
+    sharkBON = true;
+    bird1BON=false;
     birdBON=false;
     diamondBON=false;
     roseBON=false;
@@ -305,15 +314,15 @@ void birdS1 () {
     turtleBON=false;
     spiderBON=false;
   }
-    if(stampBON == true){
-      image(birdS1, mouseX,mouseY,50,50); 
+    if(sharkBON == true){
+      image(sharkS, mouseX,mouseY,50,50); 
    }
   }
   
   void spiderS () {
-  if ( mouseX>100 && mouseX<140 && mouseY>500 && mouseY<540) {
-    stampBON = true;
-    stampBOFF=false;
+  if ( mouseX>170 && mouseX<200 && mouseY>545 && mouseY<585) {
+    spiderBON = true;
+    bird1BON=false;
     birdBON=false;
     diamondBON=false;
     roseBON=false;
@@ -323,15 +332,15 @@ void birdS1 () {
     treeBON=false;
     turtleBON=false;
   }
-    if(stampBON == true){
-      image(birdS1, mouseX,mouseY,50,50); 
+    if(spiderBON == true){
+      image(spiderS, mouseX,mouseY,60,60); 
    }
   }
   
   void treeS () {
-  if ( mouseX>100 && mouseX<140 && mouseY>500 && mouseY<540) {
-    stampBON = true;
-    stampBOFF=false;
+  if ( mouseX>200 && mouseX<250 && mouseY>540 && mouseY<610) {
+    treeBON = true;
+    bird1BON=false;
     birdBON=false;
     diamondBON=false;
     roseBON=false;
@@ -341,15 +350,15 @@ void birdS1 () {
     turtleBON=false;
     spiderBON=false;
   }
-    if(stampBON == true){
-      image(birdS1, mouseX,mouseY,50,50); 
+    if(treeBON == true){
+      image(treeS, mouseX,mouseY,150,150); 
    }
   }
   
   void turtleS () {
-  if ( mouseX>100 && mouseX<140 && mouseY>500 && mouseY<540) {
-    stampBON = true;
-    stampBOFF=false;
+  if ( mouseX>240 && mouseX<265 && mouseY>555 && mouseY<580) {
+    turtleBON = true;
+    bird1BON=false;
     birdBON=false;
     diamondBON=false;
     roseBON=false;
@@ -359,15 +368,15 @@ void birdS1 () {
     treeBON=false;
     spiderBON=false;
   }
-    if(stampBON == true){
-      image(birdS1, mouseX,mouseY,50,50); 
+    if(turtleBON == true){
+      image(turtleS, mouseX,mouseY,50,50); 
    }
   }
   
   void roseS () {
-  if ( mouseX>100 && mouseX<140 && mouseY>500 && mouseY<540) {
-    stampBON = true;
-    stampBOFF=false;
+  if ( mouseX>275 && mouseX<305 && mouseY>550 && mouseY<580) {
+    roseBON = true;
+    bird1BON=false;
     birdBON=false;
     diamondBON=false;
     dragonBON=false;
@@ -377,8 +386,8 @@ void birdS1 () {
     turtleBON=false;
     spiderBON=false;
   }
-    if(stampBON == true){
-      image(birdS1, mouseX,mouseY,50,50); 
+    if(roseBON == true){
+      image(roseS, mouseX,mouseY,50,50); 
    }
   }
   
