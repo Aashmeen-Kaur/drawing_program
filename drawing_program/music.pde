@@ -5,42 +5,17 @@ import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 
-//This Program Runs at 960*540, DO NOT TRY TO STRETCH IT!
-// Global Variables
+
 Boolean draw = false, toolBarOn = false, toolBarReset = false, lineD=false, rectD=false, triD=false, eraserOn=false, ColourBOn=false, ColourBReset=false, BGbar=false, BGbarReset=false, exTemp=false, exTempReset=false;
 float diameter;
-float quitBX, quitBY, quitBWidth, quitBHeight;
 int reset=1, intilSize=30, size;
-color  quitBcolour, buttonBlue=#3EA9FF, lgrey=#E6E6E6;
-
-float NpaperX, NpaperY, NpaperWidth, NpaperHeight;
-//cover
 float HorX, HorY, HorW, HorH, VerX, VerY, VerW, VerH;
-//tolls
-float circleDX, circleDY, circleDWidth, circleDHeight;
-float lineDX, linetDY, lineDWidth, lineDHeight;
-float toolsX, toolsY, toolsWidth, toolsHeight;
-float eraserX, eraserY;
-//line tool
-float DlineX1, DlineY1, DlineX2, DlineY2, DlineX3, DlineY3, DlineWidth, DlineHeight, elineX, elineY, elineD;
-//colour
-float colourX, colourY, colourW, colourH;
-float redX, redY, blueX, blueY, yellowX, yellowY, orangeX, orangeY, purpleX, purpleY, greenX, greenY, blackX, blackY, whiteX, whiteY,CselW;
-color Dblue=#1756FF, Dyellow=#FBFF1F, Dorange=#FF9121, Dpurple=#8F21FF, Dgreen=#1BCB0C, DrawingColour;
-color Dcolour;
-//background
-float BGX, BGY, BGW, BGH;
-float BGWhiteX, BGWhiteY, BGWidth, BGHeight, BGBlackX, BGBlackY, BGBlackW, BGBlackH, BGGreyX, BGGreyY, BGGreyW, BGGreyH;
 
-//templates
-float temX, temY, temW, temH;
-float temX1, temY1, temX2, temY2, temX3, temY3;
-float exX1, exY1, exW, exH, exX2, exY2, exW2, exH2, exX3, exY3, exW3, exH3;
-PImage biaoqing1, biaoqing2, biaoqing3;
+
 //Music
 //int numberOfSongs = 8;
 int currentSong = numberOfSongs - numberOfSongs;
-color purple=#2C08FF; //Comparison of Gray Scale and Hexidecimal
+color purple=#2C08FF; 
 PFont titleFont;
 float MuBarX, MuBarY, MuBarW, MuBarH;
 float NSX, NSY, LSX, LSY, PSX, PSY, MBBW, MBBH, LoopSX, LoopSY,NSW,NSH,FFX,RSX,FBW,FBH,FFY,OW,OH;
@@ -50,18 +25,7 @@ PImage NextS, LastS, PlayS, PauseS, LoopS, OrderS;
 //
 void MusicBar()
 {
-  //if (mouseX>=MuBarX && mouseX<=MuBarX+MuBarW && mouseY>=MuBarY && mouseY<=MuBarY+MuBarH) {
-  //fill(buttonBlue);} else {fill(white);}
-  //noStroke();
-  //rect(MuBarX, MuBarY, MuBarW, MuBarH);
-  ////
-  //size = 18;
-  //textFont(font, size);
-  //text(JukeBox, MuBarX, MuBarY, MuBarW, MuBarH);
   
-  //if(MBOn==true){
-  //  noStroke();
-  //  fill(white);
     image(back,LSX,LSY,NSW,NSH);
     image(fastforward,FFX,FFY,FBW,FBH);
     image(rewind,RSX,FFY,FBW,FBH);
@@ -86,16 +50,9 @@ void MusicBar()
       //rect(LoopSX,LoopSY,MBBW,MBBH);
       image(loop,LoopSX,LoopSY,MBBW,MBBH);}}
       
-  //if(MBreset==true){
-  //  noStroke();
-  //  fill(grey);
-  //  rect(LSX,LSY,MBBW*3.1,MBBH);
-  //  rect(LoopSX,LoopSY,MBBW,MBBH);}
-    
-//}
+  
 //
 // Global Variables
-String quitBString="Quit", secTextString="new paper", tools="tools", eraser="Eraser", colour="colour", BG="background", temT="templates";
 //Music Text
 String JukeBox="Juke Box";
 
