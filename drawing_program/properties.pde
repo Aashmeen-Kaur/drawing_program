@@ -3,9 +3,11 @@ PImage previousFrame;              //Previous frame - updated on mouseRelease
 
 color black = color(0, 100);       //color: black
 color white = color(100, 100);     //color: white
-color red = color(100, 100, 100);  //color: red
+color red = #F01313;               //color: red
 color cyan = color(50, 100, 100);  //color: cyan
-color gray = color(40, 100);       //color: gray
+color grey = color(40, 100);       //color: gray
+color darkRed = #c40000;           //color: dark red
+color yellow = #FFF700;
 
 color panelColor = color(220);     //panel color
 int panelWidth = 100;              //panel width115;             
@@ -52,14 +54,23 @@ int randomColorFrameCount = 0;     //Framecount for random color button
 int lineFirstX = 0;                //First X when drawing line
 int lineFirstY = 0;                //First Y when drawing line
 
-int helpPanelFontSize = 12;        //font size of help panel
+int helpPanelFontSize = 13;        //font size of help panel
 
 boolean drawAlphaBar = true;       //draw the alpha bar (brushColorBar3)
 boolean displayPanel = true;       //displayPanel true --> Draw displayPanel
 boolean helpPanel = false;         //display help screen
+boolean quit = false;              //quit button
 boolean fillGradientBG = false;    //fill the background with a gradient
 boolean fillBackground = false;    //fill the background with the primary color
-boolean clearBackground = false;   //clear the background - to white
+boolean stamp = false;         //clear the background - to white
+boolean pen = false;
+boolean template = false;
+boolean undo = false;
+boolean save = false;
+boolean erase = false;
+boolean skey = false;
+boolean help = false;
+boolean clearBackground=false;
 boolean drawCircle = false;        //draw circle or not
 boolean drawEllipse = false;       //draw ellipse or not
 boolean drawSquare = false;        //draw square or not
@@ -68,3 +79,17 @@ boolean drawTriangle = false;      //draw triangle or not
 boolean drawLine = false;          //draw line or not
 boolean lineClicked = false;       //line's first point
 boolean randomColor = false;       //draw lines/shapes with random colors
+
+PImage ikey,play,pause,next,back,loop,order,fastforward,rewind;
+
+void population (){
+  ikey = loadImage("images/keyboard shortcut.png");
+  next = loadImage("images/Forward.png");
+  back = loadImage("images/Back.png");
+  play = loadImage("images/play.png");
+  pause = loadImage("images/pause.png");
+  loop = loadImage("images/loop.png");
+  order = loadImage("images/order.png");
+  fastforward = loadImage("images/FastForward.png");
+  rewind = loadImage("images/Rewind.png");
+};
