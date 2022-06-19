@@ -87,6 +87,7 @@ void MusicSetup()
    song[currentSong+=1] = minim.loadFile("music/Ashke Ashke - Gur Sidhu.mp3");
    song[currentSong+=1] = minim.loadFile("music/Dekhi_Jau .mp3");
    song[currentSong+=1] = minim.loadFile("music/Titliaan.mp3");
+   song[currentSong+=1] = minim.loadFile("music/Janaza Sidhu Moose Wala.mp3");
   currentSong-=currentSong;
   for ( int i=currentSong; i<song.length; i++ ) {
     songMetaData[i] = song[i].getMetaData(); //reads song meta 1, like song 1, mimicing array notation

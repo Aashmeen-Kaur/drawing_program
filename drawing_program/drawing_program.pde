@@ -1,6 +1,6 @@
 Minim minim;
 
-int numberOfSongs = 8;
+int numberOfSongs = 9;
 
 AudioPlayer[] song = new AudioPlayer[numberOfSongs]; //creates a "Play List" variable holding extesions ...
 AudioMetaData[] songMetaData = new AudioMetaData[numberOfSongs];
